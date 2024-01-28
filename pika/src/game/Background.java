@@ -5,27 +5,35 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Background {
 
-    private Picture picture;
+    private Picture background;
+    private static int backgroundWidth;
+    private static int backgroundHeight;
 
     public Background() {
-        picture = new Picture(0, 0, Game.RESOURCES_PREFIX + "road.png");
-        picture.draw();
+        background = new Picture(0, 0, Game.RESOURCES_PREFIX + "road.png");
+        background.draw();
+        backgroundWidth = background.getMaxX();
+        backgroundHeight = background.getMaxY();
     }
 
 
-    public int getWidth() {
-        return picture.getWidth();
+    public static int getWidth() {
+        return backgroundWidth;
     }
 
-    public int getHeight(){
-        return picture.getHeight();
+    public static int getHeight(){
+        return backgroundHeight;
+    }
+
+    public Picture getBackground() {
+        return background;
     }
 
     public void moveRight(){
-        picture.translate(Game.SPEED, 0);
+        background.translate(Game.SPEED, 0);
     }
 
     public void moveLeft(){
-        picture.translate(-Game.SPEED, 0);
+        background.translate(-Game.SPEED, 0);
     }
 }

@@ -16,8 +16,8 @@ public class Main {
 
         Background background = new Background();
         Car car = new Car();
-        Wall wall = new Wall();
-        Client client = new Client();
+        KoneFactory koneFactory = new KoneFactory();
+        //Client client = new Client();
         car.setBackground(background);
 
         KeyboardLogic keyboardLogic = new KeyboardLogic();

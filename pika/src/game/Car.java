@@ -6,7 +6,7 @@ public class Car {
 
     private Background background;
 
-    private Picture picture;
+    private Picture car;
 
     private String carRight;
     private String carLeft;
@@ -18,8 +18,8 @@ public class Car {
         carLeft = Game.RESOURCES_PREFIX + "carLeft.png";
         carUp = Game.RESOURCES_PREFIX + "carUp.png";
         carDown = Game.RESOURCES_PREFIX + "carDown.png";
-        picture = new Picture(0, 400, carRight);
-        picture.draw();
+        car = new Picture(0, 400, carRight);
+        car.draw();
     }
     //picture = new Picture(STARTING_X, STARTING_Y, "Resources/catiaStreetStore.PNG"); //Create Character model on the screen
 
@@ -29,31 +29,31 @@ public class Car {
 
     public void moveLeft(){
 
-        if (picture.getX() - Game.SPEED >= 0) {
-            picture.load(carLeft);
-            picture.translate(-Game.SPEED, 0);
+        if (car.getX() - Game.SPEED >= 0) {
+            car.load(carLeft);
+            car.translate(-Game.SPEED, 0);
         }
     }
 
     public void moveRight(){
 
-        if(picture.getX() + picture.getWidth() + Game.SPEED <= background.getWidth()){
-            picture.load(carRight);
-            picture.translate(Game.SPEED, 0);}
+        if(car.getX() + car.getWidth() + Game.SPEED <= background.getWidth()){
+            car.load(carRight);
+            car.translate(Game.SPEED, 0);}
     }
 
     public void moveUp() {
 
-        if (picture.getY() - Game.SPEED >= 0) {
-            picture.load(carUp);
-            picture.translate(0, -Game.SPEED);
+        if (car.getY() - Game.SPEED >= 0) {
+            car.load(carUp);
+            car.translate(0, -Game.SPEED);
         }
     }
 
     public void moveDown(){
-        if (picture.getY() + picture.getHeight() + Game.SPEED <= background.getHeight()) {
-            picture.load(carDown);
-            picture.translate(0, Game.SPEED);
+        if (car.getY() + car.getHeight() + Game.SPEED <= background.getHeight()) {
+            car.load(carDown);
+            car.translate(0, Game.SPEED);
         }
     }
 }

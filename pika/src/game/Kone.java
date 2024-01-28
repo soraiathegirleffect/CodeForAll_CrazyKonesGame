@@ -1,12 +1,12 @@
 package game;
 
 import org.academiadecodigo.simplegraphics.pictures.Picture;
-public class Wall {
+public class Kone {
 
     private Picture picture;
 
-    public Wall() {
-        picture = new Picture(350, 300, Game.RESOURCES_PREFIX + "wall.png");
+    public Kone(Position position) {
+        picture = new Picture(350, 300, Game.RESOURCES_PREFIX + "kone.png");
         picture.draw();
     }
 }
