@@ -7,8 +7,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Canvas.setMaxX(800);
-        Canvas.setMaxY(400);
+        //Canvas.setMaxX(1200);
+        //Canvas.setMaxY(700);
         // x, y, width, height
 
         Background background = new Background();

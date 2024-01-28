@@ -9,7 +9,7 @@ public class Car {
     private Picture picture;
 
     public Car(){
-        picture = new Picture(10, 20, Game.RESOURCES_PREFIX + "car.png");
+        picture = new Picture(5, 5, Game.RESOURCES_PREFIX + "car.png");
         //picture = new Picture(STARTING_X, STARTING_Y, "Resources/catiaStreetStore.PNG"); //Create Character model on the screen
         picture.draw();
     }
@@ -20,21 +20,28 @@ public class Car {
 
     public void moveLeft(){
 
-        picture.translate(-Game.SPEED, 0);
+        if (picture.getX() - Game.SPEED >= 0) {
+            picture.translate(-Game.SPEED, 0);
+        }
     }
 
     public void moveRight(){
 
-        picture.translate(Game.SPEED, 0);
+        if(picture.getX() + picture.getWidth() + Game.SPEED <= background.getWidth()){
+        picture.translate(Game.SPEED, 0);}
     }
 
-    public void moveUp(){
+    public void moveUp() {
 
-        picture.translate(0, -Game.SPEED);
+        if (picture.getY() - Game.SPEED >= 0) {
+            picture.translate(0, -Game.SPEED);
+        }
     }
 
     public void moveDown(){
-        picture.translate(0, Game.SPEED);
+        if (picture.getY() + picture.getHeight() + Game.SPEED <= background.getHeight()) {
+            picture.translate(0, Game.SPEED);
+        }
     }
 }
 

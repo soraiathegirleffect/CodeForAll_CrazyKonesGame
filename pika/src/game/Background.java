@@ -13,6 +13,13 @@ public class Background {
     }
 
 
+    public int getWidth() {
+        return picture.getWidth();
+    }
+
+    public int getHeight(){
+        return picture.getHeight();
+    }
 
     public void moveRight(){
         picture.translate(Game.SPEED, 0);
