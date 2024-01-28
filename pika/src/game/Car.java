@@ -45,14 +45,14 @@ public class Car {
     public void moveUp() {
 
         if (car.getY() - Game.SPEED >= 0) {
-            car.load(carUp);
+            car.load(carRight);
             car.translate(0, -Game.SPEED);
         }
     }
 
     public void moveDown(){
         if (car.getY() + car.getHeight() + Game.SPEED <= background.getHeight()) {
-            car.load(carDown);
+            car.load(carRight);
             car.translate(0, Game.SPEED);
         }
     }

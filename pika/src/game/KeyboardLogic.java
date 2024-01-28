@@ -41,14 +41,14 @@ public class KeyboardLogic implements KeyboardHandler {
     @Override
     public void keyPressed(KeyboardEvent keyboardEvent) {
 
-        if(keyboardEvent.getKey() == KeyboardEvent.KEY_RIGHT){
+        /*if(keyboardEvent.getKey() == KeyboardEvent.KEY_RIGHT){
             //setCurrentDirection(Direction.RIGHT);  character.setDirection(RIGHT);
             car.moveRight();
         }
 
         if(keyboardEvent.getKey() == KeyboardEvent.KEY_LEFT){
             car.moveLeft();
-        }
+        }*/
 
         if(keyboardEvent.getKey() == KeyboardEvent.KEY_UP){
             car.moveUp();
